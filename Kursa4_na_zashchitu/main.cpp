@@ -40,7 +40,7 @@ int main()
     int NumberOfAvailableSeats = 0;
     int choice = 0;
     int TicketNumber = 100000000;
-
+    
 #ifdef DEBUG//входные данные для проверки
     PushPassengers(Table, "Passengers.txt");
     PushAirFlights(Tree, "AirFlight.txt");
@@ -302,6 +302,7 @@ int main()
                 break;
             }
             Tree.Clear();//очищаем
+            List.Clear();
             cout << "\nДанные об авиарейсах удалены!\n" << endl;
             break;
         }

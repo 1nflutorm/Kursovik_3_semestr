@@ -173,7 +173,7 @@ int HashTable_t::PrintAllPassengersByAirFlight(TicketList_t& List_, const string
     int count = 0;
     auto current = List_.GetHead();
     string FlightNum = key;
-    for (int i = 0; i < List_.GetSize(); i++)//цикл по размеру списка
+    for (int i = 0; i < List_.GetSize() - 1; i++)//цикл по размеру списка
     {
         if (current->ticket->GetAirFligthNum() == FlightNum)//если совпадает авиарейс
         {

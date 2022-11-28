@@ -169,7 +169,7 @@ void TicketList_t::PopBack()
 	if (!Head)//если список пустой
 		return;//просто выходим
 	node* current = Head;//иначе создаем временную переменную, равную голове
-	for (int i = 0; i < Size - 1; i++)//ищем последний элемент
+	for (int i = 0; i < Size; i++)//ищем последний элемент
 		current = current->pNext;
 	delete current;//удаляем его
 	current = nullptr;//для перестраховки приравниваем его nullptr для избежания дальнейших ошибок
@@ -178,7 +178,8 @@ void TicketList_t::PopBack()
 //реализация метода очистки списка
 void TicketList_t::Clear()
 {
-	for (int i = 0; i < Size; i++)//цикл по размеру списка
+	int SizeCpy = Size;
+	for (int i = 0; i < SizeCpy; i++)//цикл по размеру списка
 		PopBack();//удаляем последний элемент
 }
 //реализация метода удаления где-то вгутри списка
