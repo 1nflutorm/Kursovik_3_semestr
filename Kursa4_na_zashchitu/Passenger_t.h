@@ -15,4 +15,7 @@ public:
     Passenger_t(const string& pas, const string& place, const string& date, const string& name, const string& birth);//прототип констректора с параметрами
     string GetFIO();//прототип метода получения имени
     string GetPasportNum();//прототип метода получения номера пасспорта
+    string GetPlaceOfIssue();//прототип метода получения места выдачи паспорта
+    string GetDateOfIssue();//прототип метода получения даты выдачи паспорта
+    string GetBirthday();//прототип метода получения даты рождения
 };

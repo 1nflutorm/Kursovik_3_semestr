@@ -28,3 +28,18 @@ string Passenger_t::GetPasportNum()
 {
     return PasportNum;
 }
+//реализация метода получения места выдачи
+string Passenger_t::GetPlaceOfIssue()
+{
+    return PlaceOfIssue;
+}
+//реализация метода получения даты выдачи паспорта
+string Passenger_t::GetDateOfIssue()
+{
+    return DateOfIssue;
+}
+//реализация метода получения даты рождения
+string Passenger_t::GetBirthday()
+{
+    return Birthday;
+}

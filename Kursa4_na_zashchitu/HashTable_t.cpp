@@ -178,8 +178,7 @@ int HashTable_t::PrintAllPassengersByAirFlight(TicketList_t& List_, const string
         if (current->ticket->GetAirFligthNum() == FlightNum)//если совпадает авиарейс
         {
             int index = Find(current->ticket->GetPasportNum());//находим пассажира
-            cout << "\nИмя пассажира:" << Table[index]->GetFIO() << endl;//выводим данные
-            cout << "Номер паспорта пассажира: " << current->ticket->GetPasportNum() << endl;
+            PrintOne(index);
             count++;//увеличиваем счетчик
         }
         current = current->pNext;//продвигаемся по списку
@@ -203,7 +202,10 @@ void HashTable_t::Clear()
 void HashTable_t::PrintOne(const int& index)
 {
     cout << "Имя пассажира: " << Table[index]->GetFIO() << endl;
-    cout << "Номер паспорта пассажира: " << Table[index]->GetPasportNum() << endl << endl;
+    cout << "Номер паспорта пассажира: " << Table[index]->GetPasportNum() << endl;
+    cout << "Место выдачи паспорта: " << Table[index]->GetPlaceOfIssue() << endl;
+    cout << "Дата выдачи паспорта: " << Table[index]->GetDateOfIssue() << endl;
+    cout << "Дата рождения пассажира: " << Table[index]->GetBirthday() << endl << endl;
 }
 //реализация метода вывода всех пассажиров на экран
 void HashTable_t::PrintAll()
