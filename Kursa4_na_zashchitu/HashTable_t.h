@@ -5,7 +5,7 @@
 #include "Passenger_t.h"
 #include "TicketList_t.h"
 #include "AirFlight_t.h"
-#define SIZE 52
+#define SIZE 100
 using namespace std;
 
 class HashTable_t

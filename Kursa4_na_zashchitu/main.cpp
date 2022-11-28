@@ -10,7 +10,7 @@
 #include "AirFlightTree_t.h"
 #include "MainFunctions.h"
 #define MAIN
-#define DEBUG
+#define INPUT
 using namespace std;
 
 int main()
@@ -41,12 +41,12 @@ int main()
     int choice = 0;
     int TicketNumber = 100000000;
     
-#ifdef DEBUG//входные данные для проверки
+#ifdef INPUT//входные данные для проверки
     PushPassengers(Table, "Passengers.txt");
     PushAirFlights(Tree, "AirFlight.txt");
     PushTickets(Tree, List, "tickets.txt");
     List.InsertSortList(List);
-#endif // DEBUG
+#endif // INPUT
 
 
 #ifdef MAIN
@@ -408,6 +408,7 @@ int main()
                 cout << "\nНа данный авиарейс нет свободных мест!\n" << endl;//выводим соответсвующее сообшение
                 continue;
             }
+
             TicketNum = to_string(++TicketNumber);//формируем номер билета
             List.PushBack(PasportNum, AirFligthNum, TicketNum);//заполнем список
             cout << "\nБилет продан! \nДанные о купленом билете: \n" << endl;
